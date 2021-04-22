@@ -1,0 +1,91 @@
+:root {
+    --primary-400: #0F0;
+    --accent-900: #0f0f0f;
+}
+
+::selection {
+    background-color: var(--primary-400);
+    color: var(--accent-900);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--accent-900);
+}
+
+body,
+input,
+button,
+p,
+a {
+    color: var(--primary-400);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    text-decoration: none;
+}
+a:hover {
+    background-color: var(--primary-400);
+    color: var(--accent-900);
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    background-color: var(--accent-900);
+    border-top: none;
+}
+
+.toolbar {
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+
+    width: 100vw;
+    height: 10vh;
+
+    background-color: var(--accent-900);
+}
+
+.toolbar.top {
+    border-bottom: 1px dotted var(--primary-400);
+}
+.toolbar.bottom {
+    border-top: 1px dotted var(--primary-400);
+}
+
+.toolbar > p {
+    font-size: 5vh;
+    height: 5vh;
+}
+
+input {
+    flex: 1;
+    background: transparent;
+    border: transparent;
+    outline: none;
+    border-bottom: 1px solid var(--primary-400);
+    transition: border-bottom 0.2s linear;
+}
+
+input:focus {
+    border-bottom: 2px solid var(--primary-400);
+    transition: border-bottom 0.2s linear;
+}
+
+button {
+    margin-left: 1em;
+    background-color: var(--accent-900);
+    border: 0;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+}
+button:hover {
+    background-color: #0F0;
+    color: #0f0f0f;
+    cursor: pointer;
+}
