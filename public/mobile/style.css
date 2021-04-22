@@ -1,6 +1,8 @@
 :root {
-    --primary-400: #0F0;
-    --accent-900: #0f0f0f;
+    --primary-200: rgb(0, 127, 0);
+    --primary-300: rgb(0, 222, 0);
+    --primary-400: rgb(0, 255, 0);
+    --accent-900: rgb(16, 16, 16);
 }
 
 ::selection {
@@ -39,6 +41,7 @@ a:hover {
     flex-direction: column;
     width: 100vw;
     height: 80vh;
+    padding: 1em;
     background-color: var(--accent-900);
     border-top: none;
 }
@@ -91,9 +94,58 @@ button.submit {
     width: 2em;
     height: 2em;
 }
-button.room {
-    height: 2em;
+
+.chat {
+    padding: 1em 0;
 }
+.chat::before,
+.chat::after {
+    padding: 0.5em 0.5em;
+}
+.chat.left {
+    text-align: left;
+}
+.chat.left::before {
+    content: "[" attr(username) "]:";
+    border-left: 1px dotted var(--primary-400);
+}
+.chat.right {
+    text-align: right;
+    color: var(--primary-200);
+}
+.chat.right::after {
+    content: ":[" attr(username) "]";
+    color: var(--primary-400);
+    border-right: 1px dotted var(--primary-400);
+}
+
+.room {
+    padding: 0.5em;
+    font-size: 1.125rem;
+    word-break: break-all;
+}
+.room:hover {
+    background-color: var(--primary-300);
+    color: var(--accent-900);
+}
+.room.active {
+    background-color: var(--primary-400);
+    color: var(--accent-900);
+}
+
+.room::before {
+    content: "~ "
+}
+.room.active::before {
+    content: "# "
+}
+.room.alert::before {
+    content: "! "
+}
+.room:hover::before {
+    content: "> "
+}
+
 button:hover {
     background-color: #0F0;
     color: #0f0f0f;
