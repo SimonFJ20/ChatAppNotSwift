@@ -98,6 +98,7 @@ button {
 }
 .chat {
     padding: 1em 0;
+    word-wrap: break-word;
 }
 .chat::before,
 .chat::after {

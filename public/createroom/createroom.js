@@ -5,6 +5,15 @@ const htmlBackButton = document.getElementById('back');
 
 checkLogin();
 
+const redirectHandler = () => {
+    const params = new URLSearchParams(window.location.search);
+    if(params.has('r') && params.get('r') === 'mobile') {
+        window.location.pathname = '/mobile/';
+    } else {
+        window.location.pathname = '';
+    }
+}
+
 const createHandler = async () => {
     if(htmlTitleInput.value === '') return;
 
@@ -24,12 +33,14 @@ const createHandler = async () => {
     const res = await (await fetch("/api/rooms/create", reqOptions)).json();
     
     if(res.success) {
-        window.location.pathname = '';
+        redirectHandler();
     } else {
         
     }
 
 }
+
+
 
 htmlCreateButton.addEventListener('click', createHandler);
 htmlBackButton.addEventListener('click', () => window.location.pathname = '/');

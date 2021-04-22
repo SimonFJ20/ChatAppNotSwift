@@ -14,10 +14,6 @@
     box-sizing: border-box;
 }
 
-*[hidden] {
-    display: hidden;
-}
-
 body {
     background-color: var(--accent-900);
 }
@@ -101,6 +97,7 @@ button.submit {
 
 .chat {
     padding: 1em 0;
+    word-wrap: break-word;
 }
 .chat::before,
 .chat::after {
@@ -156,13 +153,13 @@ button:hover {
     cursor: pointer;
 }
 
-#username {
+#userManagerUsername {
     flex: 1;
     font-size: 1.2rem;
     padding-right: 1em;
     border-right: 1px dotted var(--primary-400);
 }
 
-#logout {
+#userManagerLogout {
     margin-left: 1em;
 }
