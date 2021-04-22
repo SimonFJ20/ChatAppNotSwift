@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="full-chat-container">
+        <div class="toolbar top">
+            <p> <button id="back">&lt;</button> room</p>
+        </div>
+        <div id="chat-container" class="container">
+            <p class="chat left" username="Chat">Hello and welcome to Chat</p>
+            <p class="chat right" username="App">This is a Chat app by Simon From Jakobsen</p>
+            <p class="chat right" username="App">And Theis Pieter Brun Hollebæk</p>
+            <p class="chat left" username="Chat">This Chat app uses NodeJS and MongoDB on the backend</p>
+            <p class="chat left" username="Chat">Making it a simple, yet scaleable piece of software</p>
+            <p class="chat right" username="App">Feel free to join one of the chat rooms</p>
+            <p class="chat right" username="App">And start chatting</p>
+        </div>
+        <div class="toolbar bottom">
+            <input>
+            <button class="submit">&gt;</button>
+        </div>
+    </div>
+    
+    <div id="full-room-container" hidden>
+        <div class="toolbar top"><h1>rooms</h1></div>
+        <div class="container">
+            <button class="room">pik</button>
+            <button class="room">pik</button>
+            <button class="room">pik</button>
+            <button class="room">pik</button>
+            <button class="room">pik</button>
+            <button class="room">pik</button>
+            <button class="room">pik</button>
+        </div>
+        <div class="toolbar bottom"><span id="username">hej</span><button id="logout">log out</button></div> 
+    </div>
+</body>
+</html>
