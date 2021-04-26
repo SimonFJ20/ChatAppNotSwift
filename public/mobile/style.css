@@ -46,6 +46,10 @@ a:hover {
     border-top: none;
 }
 
+#chat-list-container {
+    overflow-y: auto;
+}
+
 .toolbar {
     padding: 0 1em;
     display: flex;
@@ -135,16 +139,16 @@ button.submit {
 }
 
 .room::before {
-    content: "~ "
+    content: "~ ";
 }
 .room.active::before {
-    content: "# "
+    content: "# ";
 }
 .room.alert::before {
-    content: "! "
+    content: "! ";
 }
 .room:hover::before {
-    content: "> "
+    content: "> ";
 }
 
 button:hover {
