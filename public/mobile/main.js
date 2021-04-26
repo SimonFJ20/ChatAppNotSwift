@@ -57,7 +57,6 @@ const setCreateRoom = async () => {
     const params = new URLSearchParams();
     params.set('r', 'mobile');
     dom.createRoomButton.addEventListener('click', () => {
-        // hjælp                                   vvvv
         window.location.search = '?' + params.toString();
         window.location.pathname = '/createroom';
     });
