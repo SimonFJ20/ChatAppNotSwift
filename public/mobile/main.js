@@ -10,6 +10,7 @@ const dom = {
     createRoomButton: document.getElementById('createRoom'),
     chatFieldSubmit: document.getElementById('chatFieldSubmit'),
     chatField: document.getElementById('chat-field'),
+    roomTitle: document.getElementById('room-title')
 }
 
 const state = {
